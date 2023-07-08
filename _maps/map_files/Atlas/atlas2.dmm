@@ -26,7 +26,8 @@
 	department = "AI Core";
 	departmentType = 5;
 	name = "AI Core RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "SCI"
 	},
 /obj/machinery/light_switch/east,
 /turf/open/floor/durasteel/techfloor,
@@ -478,7 +479,8 @@
 	department = "Bridge";
 	departmentType = 5;
 	name = "Bridge RC";
-	pixel_x = -32
+	pixel_x = -32;
+	payment_department = "CIV"
 	},
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/bin,
@@ -1353,9 +1355,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 8
-	},
 /turf/open/floor/carpet/ship/beige_carpet,
 /area/crew_quarters/heads/hor)
 "fS" = (
@@ -2225,18 +2224,7 @@
 /turf/open/floor/monotile/steel,
 /area/maintenance/nsv/deck1/port)
 "jQ" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
-/turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck1/hallway)
+)
 "jR" = (
 /obj/machinery/light_switch/south,
 /obj/structure/table/reinforced,
@@ -2963,7 +2951,8 @@
 	department = "Medical Bay";
 	departmentType = 3;
 	name = "Medical requests console";
-	pixel_x = -32
+	pixel_x = -32;
+	payment_department = "MED"
 	},
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=4";
@@ -3046,9 +3035,6 @@
 /obj/effect/turf_decal/tile/ship/green,
 /obj/effect/turf_decal/tile/ship/green{
 	dir = 4
-	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 8
 	},
 /obj/machinery/airalarm/directional/east,
 /turf/open/floor/durasteel/alt,
@@ -3413,7 +3399,8 @@
 	department = "AI Law Upload";
 	departmentType = 5;
 	name = "AI Upload RC";
-	pixel_y = -32
+	pixel_y = -32;
+	payment_department = "SCI"
 	},
 /turf/open/floor/circuit,
 /area/ai_monitored/turret_protected/ai_upload)
@@ -3924,7 +3911,8 @@
 	departmentType = 5;
 	name = "Research Director RC";
 	pixel_y = 30;
-	receive_ore_updates = 1
+	receive_ore_updates = 1;
+	payment_department = "SCI"
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -4676,10 +4664,6 @@
 	},
 /turf/open/floor/plating,
 /area/maintenance/nsv/deck1/starboard)
-"uV" = (
-/obj/machinery/power/solar,
-/turf/closed/wall/r_wall,
-/area/ai_monitored/turret_protected/aisat)
 "uX" = (
 /obj/machinery/door/airlock/ship/maintenance,
 /obj/structure/cable{
@@ -5205,7 +5189,8 @@
 	department = "Executive Officer";
 	departmentType = 5;
 	name = "Executive requests console";
-	pixel_y = -32
+	pixel_y = -32;
+	payment_department = "CIV"
 	},
 /obj/machinery/vending/job_disk{
 	density = 0;
@@ -5286,7 +5271,6 @@
 	pixel_x = -5;
 	pixel_y = 6
 	},
-/obj/machinery/airalarm/directional/north,
 /turf/open/floor/carpet/blue,
 /area/crew_quarters/heads/chief)
 "xr" = (
@@ -6860,7 +6844,8 @@
 	department = "Morgue Bay";
 	departmentType = 3;
 	name = "Morgue requests console";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "MED"
 	},
 /obj/structure/table/optable,
 /turf/open/floor/plating,
@@ -7988,7 +7973,8 @@
 	departmentType = 3;
 	name = "Chemistry RC";
 	pixel_y = -32;
-	receive_ore_updates = 1
+	receive_ore_updates = 1;
+	payment_department = "MED"
 	},
 /turf/open/floor/monotile/dark,
 /area/medical/chemistry)
@@ -8063,9 +8049,6 @@
 	},
 /obj/structure/closet/secure_closet/RD,
 /obj/item/bedsheet/rd,
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
-	dir = 4
-	},
 /turf/open/floor/carpet/ship/beige_carpet,
 /area/crew_quarters/heads/hor)
 "Jv" = (
@@ -8096,7 +8079,8 @@
 	department = "Medical";
 	departmentType = 3;
 	name = "Chief Medical Officer's requests console";
-	pixel_y = -32
+	pixel_y = -32;
+	payment_department = "MED"
 	},
 /obj/machinery/light_switch/west{
 	pixel_y = 12
@@ -8300,7 +8284,8 @@
 	department = "Hydroponics";
 	departmentType = 2;
 	name = "Hydroponics RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "CIV"
 	},
 /turf/open/floor/monotile/steel,
 /area/hydroponics)
@@ -8581,18 +8566,6 @@
 	},
 /turf/open/floor/monotile/dark,
 /area/ai_monitored/turret_protected/aisat)
-"Lz" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
-	dir = 4
-	},
-/turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck1/hallway)
 "LG" = (
 /obj/effect/turf_decal/tile/ship/blue{
 	dir = 4
@@ -8688,7 +8661,8 @@
 	department = "Head of Security's Desk";
 	departmentType = 5;
 	name = "Head of Security RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "SEC"
 	},
 /turf/open/floor/carpet/red,
 /area/crew_quarters/heads/hos)
@@ -8975,7 +8949,8 @@
 	department = "Vault";
 	departmentType = 5;
 	name = "Vault RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "SCI"
 	},
 /turf/open/floor/durasteel/lino,
 /area/ai_monitored/nuke_storage)
@@ -9048,11 +9023,15 @@
 /turf/open/floor/monotile/steel,
 /area/hallway/nsv/deck1/hallway)
 "Nr" = (
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
-	dir = 1
+/obj/effect/turf_decal/tile/ship/green,
+/obj/effect/turf_decal/tile/ship/green{
+	dir = 4
 	},
-/turf/open/floor/monotile/dark,
-/area/ai_monitored/turret_protected/ai_upload)
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 8
+	},
+/turf/open/floor/durasteel/alt,
+/area/hallway/nsv/deck1/hallway)
 "Ns" = (
 /obj/structure/grille,
 /turf/open/space/basic,
@@ -9653,11 +9632,6 @@
 	},
 /turf/open/floor/plating,
 /area/space/nearstation)
-"PQ" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/pill_bottle/dice,
-/turf/open/floor/monotile/dark,
-/area/crew_quarters/bar/mess_hall)
 "PR" = (
 /obj/machinery/status_display/ai/east,
 /turf/closed/wall/r_wall,
@@ -9763,7 +9737,8 @@
 	department = "Detective's Office";
 	departmentType = 5;
 	name = "Detective's Office RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "SEC"
 	},
 /turf/open/floor/carpet/red,
 /area/security/detectives_office)
@@ -10047,10 +10022,10 @@
 /obj/machinery/computer/card/minor/ce{
 	dir = 1
 	},
-/obj/structure/extinguisher_cabinet/west,
 /obj/machinery/camera/autoname{
 	dir = 1
 	},
+/obj/machinery/airalarm/directional/west,
 /turf/open/floor/monotile/steel,
 /area/crew_quarters/heads/chief)
 "RQ" = (
@@ -10385,7 +10360,8 @@
 	department = "Dormatory";
 	departmentType = 2;
 	name = "Dormatory RC";
-	pixel_y = -32
+	pixel_y = -32;
+	payment_department = "CIV"
 	},
 /turf/open/floor/carpet/ship,
 /area/crew_quarters/dorms)
@@ -10410,7 +10386,8 @@
 	department = "AI Foyer";
 	departmentType = 5;
 	name = "AI Foyer RC";
-	pixel_y = -32
+	pixel_y = -32;
+	payment_department = "SCI"
 	},
 /obj/machinery/light_switch/east,
 /turf/open/floor/monotile/dark,
@@ -11091,7 +11068,6 @@
 /area/hallway/nsv/deck1/hallway)
 "Xf" = (
 /obj/structure/closet/secure_closet/CMO,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/monotile/steel,
 /area/crew_quarters/heads/cmo)
 "Xg" = (
@@ -11632,6 +11608,9 @@
 /mob/living/simple_animal/parrot/Poly,
 /obj/structure/cable{
 	icon_state = "0-2"
+	},
+/obj/structure/extinguisher_cabinet/west{
+	pixel_y = 30
 	},
 /turf/open/floor/carpet/blue,
 /area/crew_quarters/heads/chief)
@@ -38089,7 +38068,7 @@ GW
 rZ
 ui
 TD
-uV
+tp
 tp
 Gx
 jZ
@@ -40655,8 +40634,8 @@ Bs
 Nb
 Bs
 sw
-Bs
 Ql
+Bs
 Uf
 Bs
 Bs
@@ -40912,7 +40891,7 @@ Fw
 NL
 Mv
 Zr
-Zr
+Nr
 nr
 pl
 Db
@@ -47055,7 +47034,7 @@ cL
 cL
 cL
 lx
-BQ
+jQ
 Ee
 lx
 HI

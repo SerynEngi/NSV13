@@ -105,6 +105,9 @@
 	},
 /obj/effect/turf_decal/tile/ship/blue,
 /obj/structure/bot_elevator,
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
 /turf/open/floor/durasteel/alt,
 /area/hallway/nsv/deck2/primary)
 "ap" = (
@@ -129,9 +132,6 @@
 	},
 /turf/open/floor/plasteel/chapel{
 	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 8
 	},
 /turf/open/floor/wood,
 /area/chapel/main)
@@ -180,8 +180,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/plasteel/grid/steel,
 /area/hallway/secondary/exit/departure_lounge)
 "ax" = (
@@ -518,6 +516,9 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/open/floor/durasteel/alt,
 /area/hallway/nsv/deck2/primary)
 "bC" = (
@@ -569,9 +570,6 @@
 /area/maintenance/nsv/deck2/starboard)
 "bK" = (
 /obj/machinery/airalarm/directional/west,
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 4
-	},
 /turf/open/floor/wood,
 /area/chapel/main)
 "bN" = (
@@ -691,7 +689,8 @@
 	department = "Custodial Closet";
 	departmentType = 2;
 	name = "Custodial RC";
-	pixel_x = -32
+	pixel_x = -32;
+	payment_department = "CIV"
 	},
 /turf/open/floor/durasteel/lino,
 /area/janitor)
@@ -954,7 +953,7 @@
 	},
 /obj/effect/landmark/event_spawn,
 /turf/open/floor/plasteel/grid/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "df" = (
 /obj/effect/turf_decal/ship/delivery/yellow,
 /obj/machinery/door/firedoor/border_only,
@@ -1099,20 +1098,12 @@
 /turf/closed/wall/r_wall,
 /area/nsv/weapons/gauss/battery/deck2/port)
 "dE" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+/obj/effect/turf_decal/ship/delivery/yellow,
+/obj/effect/turf_decal/ship/techfloor/corner{
 	dir = 8
 	},
-/obj/structure/cable/yellow{
-	icon_state = "6-9"
-	},
-/turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/turf/open/floor/monotile/dark,
+/area/hallway/secondary/exit/departure_lounge)
 "dF" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
@@ -1329,9 +1320,8 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/plasteel/grid/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "em" = (
 /obj/machinery/door/poddoor/ship{
 	id = "outboard_door"
@@ -1370,7 +1360,8 @@
 	department = "Deck 2 Primary Hallway";
 	departmentType = 2;
 	name = "Deck 2 Primary Hallway RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "CIV"
 	},
 /turf/open/floor/durasteel/alt,
 /area/hallway/nsv/deck2/primary)
@@ -2189,14 +2180,14 @@
 /turf/open/floor/plating/rusty_techgrid,
 /area/nsv/weapons/fore)
 "gH" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 8
 	},
 /turf/open/floor/plasteel/grid/steel,
 /area/hallway/secondary/exit/departure_lounge)
@@ -2476,17 +2467,12 @@
 /turf/open/floor/plating,
 /area/maintenance/nsv/deck2/port)
 "hx" = (
-/obj/effect/turf_decal/stripes/line{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
 	dir = 4
 	},
-/turf/open/floor/monotile/dark,
-/area/nsv/weapons/gauss/battery/deck2/port)
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/turf/open/floor/plasteel/grid/steel,
+/area/hallway/secondary/exit/departure_lounge)
 "hy" = (
 /obj/structure/fighter_launcher{
 	dir = 4;
@@ -3047,7 +3033,8 @@
 /obj/machinery/requests_console{
 	department = "Cargo Bay";
 	departmentType = 2;
-	pixel_x = 32
+	pixel_x = 32;
+	payment_department = "CAR"
 	},
 /obj/machinery/navbeacon{
 	codes_txt = "delivery;dir=8";
@@ -3118,14 +3105,13 @@
 /turf/open/floor/monotile/steel,
 /area/nsv/weapons/gauss/battery/deck2/port)
 "jt" = (
-/obj/effect/turf_decal/tile/ship/green{
-	dir = 1
+/obj/structure/rack,
+/obj/item/gps/mining,
+/obj/item/gps/mining,
+/turf/open/floor/monotile/steel{
+	initial_gas_mix = "TEMP=2.7"
 	},
-/obj/effect/turf_decal/tile/ship/green{
-	dir = 8
-	},
-/turf/open/floor/durasteel/alt,
-/area/hallway/nsv/deck2/primary)
+/area/nsv/hanger/mining)
 "ju" = (
 /obj/effect/turf_decal/tile/ship/half/green{
 	dir = 1
@@ -3219,7 +3205,8 @@
 	department = "Mining Hangar";
 	departmentType = 2;
 	name = "Mining Hangar RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "CAR"
 	},
 /obj/structure/closet/secure_closet/miner,
 /obj/item/encryptionkey/pilot,
@@ -3886,7 +3873,7 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/grid/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "ls" = (
 /obj/machinery/light{
 	dir = 1
@@ -4095,7 +4082,6 @@
 /obj/structure/cable{
 	icon_state = "4-16"
 	},
-/obj/machinery/portable_atmospherics/pump,
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
@@ -4509,13 +4495,13 @@
 "ns" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
 	},
 /turf/open/space/basic,
 /area/space/nearstation)
@@ -4738,8 +4724,8 @@
 /turf/open/floor/monotile/dark,
 /area/nsv/weapons/fore)
 "ob" = (
-/turf/closed/wall/r_wall,
-/area/nsv/weapons/gauss/battery/deck2/starboard)
+/turf/open/floor/monotile/steel,
+/area/hallway/secondary/exit/departure_lounge)
 "oc" = (
 /obj/machinery/atmospherics/pipe/simple/yellow/visible/layer4{
 	dir = 10
@@ -4915,9 +4901,8 @@
 	dir = 5
 	},
 /obj/machinery/status_display/evac/west,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /turf/open/floor/monotile/steel,
 /area/hallway/secondary/exit/departure_lounge)
 "oD" = (
@@ -5049,6 +5034,7 @@
 	brightness = 3;
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/pump,
 /turf/open/floor/plating,
 /area/maintenance/department/engine/atmos)
 "oX" = (
@@ -5123,7 +5109,8 @@
 	department = "Master At Arms' Desk";
 	departmentType = 5;
 	name = "Master at Arms RC";
-	pixel_x = 32
+	pixel_x = 32;
+	payment_department = "MUN"
 	},
 /obj/item/bedsheet/orange,
 /turf/open/floor/carpet/ship,
@@ -5713,7 +5700,8 @@
 	department = "Port Gauss Bay";
 	departmentType = 5;
 	name = "Port Gauss Bay RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "MUN"
 	},
 /turf/open/floor/monotile/steel,
 /area/nsv/weapons/gauss/battery/deck2/port)
@@ -6108,6 +6096,9 @@
 /obj/effect/turf_decal/tile/ship/green{
 	dir = 1
 	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/open/floor/durasteel/alt,
 /area/hallway/nsv/deck2/primary)
 "rT" = (
@@ -6263,10 +6254,21 @@
 /turf/open/floor/monotile/steel,
 /area/hallway/nsv/deck2/primary)
 "sq" = (
-/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
-/turf/open/floor/plasteel/grid/steel,
-/area/hallway/secondary/exit/departure_lounge)
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/solar{
+	id = "starboardsolar";
+	name = "Starboard Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space/nearstation)
 "sx" = (
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
@@ -6299,12 +6301,7 @@
 /turf/open/floor/monotile/steel,
 /area/quartermaster/storage)
 "sC" = (
-/obj/effect/turf_decal/stripes/line,
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/turf/open/floor/monotile/dark,
-/area/nsv/weapons/gauss/battery/deck2/starboard)
+)
 "sE" = (
 /obj/machinery/armour_plating_nanorepair_pump/aft_starboard{
 	apnw_id = "atlas_comedy"
@@ -6633,17 +6630,16 @@
 /turf/open/floor/monotile/dark,
 /area/science)
 "ty" = (
-/obj/effect/turf_decal/tile/ship/red{
-	dir = 8
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
 	},
-/obj/effect/turf_decal/tile/ship/red{
-	dir = 1
+/obj/machinery/power/solar{
+	id = "starboardsolar";
+	name = "Starboard Solar Array"
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
-	dir = 4
-	},
-/turf/open/floor/plasteel/grid/steel,
-/area/hallway/secondary/exit/departure_lounge)
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/hallway/nsv/deck2/primary)
 "tz" = (
 /obj/machinery/seed_extractor,
 /turf/open/floor/plasteel/techmaint,
@@ -6740,7 +6736,7 @@
 /obj/machinery/light_switch/east,
 /obj/machinery/firealarm/directional/south,
 /turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "tV" = (
 /obj/machinery/conveyor{
 	dir = 1;
@@ -6861,6 +6857,9 @@
 	dir = 1
 	},
 /obj/effect/landmark/zebra_interlock_point,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/open/floor/monotile/steel,
 /area/hallway/nsv/deck2/primary)
 "ul" = (
@@ -6956,23 +6955,18 @@
 /turf/open/floor/monotile/steel,
 /area/security/brig)
 "uv" = (
-/obj/structure/cable{
-	icon_state = "4-8"
+/obj/structure/lattice/catwalk,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 10
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
 	},
-/obj/structure/cable{
+/obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 8
-	},
-/turf/open/floor/monotile/steel,
-/area/hallway/secondary/exit/departure_lounge)
+/turf/open/space/basic,
+/area/space/nearstation)
 "uw" = (
 /obj/effect/turf_decal/ship/techfloor{
 	dir = 8
@@ -7182,6 +7176,18 @@
 	},
 /turf/open/floor/monotile/dark,
 /area/nsv/weapons)
+"vc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/turf/open/floor/carpet/royalblack,
+/area/chapel/main)
 "vd" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -7309,6 +7315,7 @@
 	pixel_x = -9;
 	sensors = list("sdmix_sensor"="Reactor                Mix                Tank")
 	},
+/obj/machinery/atmospherics/pipe/simple/green/visible,
 /turf/open/floor/plating,
 /area/engine/atmos)
 "vu" = (
@@ -7674,16 +7681,15 @@
 /turf/open/floor/plasteel/techmaint,
 /area/nsv/weapons)
 "wG" = (
-/obj/structure/cable{
+/obj/structure/lattice/catwalk,
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
-/obj/structure/cable/yellow{
-	icon_state = "6-9"
-	},
-/turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/turf/open/space/basic,
+/area/space/nearstation)
 "wJ" = (
 /obj/machinery/conveyor/slow{
 	dir = 4;
@@ -7899,7 +7905,8 @@
 	department = "Hangar";
 	departmentType = 5;
 	name = "Hangar RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "MUN"
 	},
 /turf/open/floor/monotile/dark/airless,
 /area/nsv/hanger/notkmcstupidhanger)
@@ -8011,6 +8018,10 @@
 	},
 /turf/open/floor/monotile/dark,
 /area/nsv/weapons/gauss/battery/deck2/starboard)
+"xF" = (
+/obj/effect/spawner/structure/window/reinforced,
+/turf/open/floor/plating,
+/area/hallway/secondary/exit/departure_lounge)
 "xH" = (
 /obj/effect/turf_decal/tile/ship/half/red{
 	dir = 1
@@ -8182,7 +8193,7 @@
 	icon_state = "plant-10"
 	},
 /turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "yf" = (
 /obj/structure/lattice,
 /turf/open/space/basic,
@@ -8455,7 +8466,7 @@
 	dir = 1
 	},
 /turf/closed/wall/r_wall,
-/area/janitor)
+/area/nsv/weapons/gauss/battery/deck2/starboard)
 "yY" = (
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/cable{
@@ -8701,6 +8712,18 @@
 	},
 /turf/open/floor/monotile/steel,
 /area/quartermaster/storage)
+"zK" = (
+/obj/machinery/requests_console{
+	color = list(0,1,0,1,0,0,0,0,1,0,0,0);
+	department = "Munitions";
+	departmentType = 3;
+	name = "Munitions requests console";
+	pixel_y = -32;
+	payment_department = "MUN"
+	},
+/obj/structure/ladder,
+/turf/open/floor/monotile/dark,
+/area/nsv/weapons)
 "zL" = (
 /obj/effect/turf_decal/ship/outline,
 /obj/machinery/missile_builder/assembler{
@@ -8992,20 +9015,16 @@
 "AR" = (
 /obj/structure/chair,
 /turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "AS" = (
 /obj/structure/chair{
 	dir = 4
 	},
 /obj/structure/cable{
-	icon_state = "1-8"
+	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4,
 /turf/open/floor/monotile/steel,
 /area/hallway/secondary/exit/departure_lounge)
 "AT" = (
@@ -9100,15 +9119,15 @@
 /turf/open/floor/monotile/steel,
 /area/hallway/nsv/deck2/primary)
 "Bi" = (
-/obj/effect/turf_decal/tile/ship/red,
-/obj/effect/turf_decal/tile/ship/red{
-	dir = 4
+/obj/structure/lattice/catwalk,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
-	dir = 8
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
 	},
-/turf/open/floor/plasteel/grid/steel,
-/area/hallway/secondary/exit/departure_lounge)
+/turf/open/space/basic,
+/area/space/nearstation)
 "Bj" = (
 /turf/open/floor/monotile/dark,
 /area/science)
@@ -9134,7 +9153,8 @@
 	department = "Starboard Gauss Bay";
 	departmentType = 5;
 	name = "Starboard Gauss Bay RC";
-	pixel_x = -32
+	pixel_x = -32;
+	payment_department = "MUN"
 	},
 /turf/open/floor/monotile/steel,
 /area/nsv/weapons/gauss/battery/deck2/starboard)
@@ -9294,7 +9314,7 @@
 	dir = 4
 	},
 /turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "BU" = (
 /turf/closed/wall/r_wall{
 	layer = 2.91
@@ -9328,7 +9348,7 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/plasteel/grid/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "BZ" = (
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -9549,7 +9569,7 @@
 	dir = 6
 	},
 /turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "CD" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -9971,7 +9991,7 @@
 	dir = 4
 	},
 /turf/open/floor/plating,
-/area/maintenance/nsv/deck2/starboard)
+/area/chapel/main)
 "Ea" = (
 /obj/machinery/holopad,
 /turf/open/floor/carpet/red,
@@ -10167,7 +10187,8 @@
 	department = "Quartermaster's Office";
 	departmentType = 2;
 	name = "Quartermaster's Office RC";
-	pixel_x = 32
+	pixel_x = 32;
+	payment_department = "CAR"
 	},
 /turf/open/floor/carpet/ship/beige_carpet,
 /area/quartermaster/qm)
@@ -11003,11 +11024,11 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
 	},
-/turf/open/floor/plasteel/chapel{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 8
+	},
+/turf/open/floor/plasteel/chapel{
+	dir = 1
 	},
 /turf/open/floor/carpet/royalblack,
 /area/chapel/main)
@@ -11259,6 +11280,11 @@
 /obj/effect/turf_decal/tile/yellow{
 	dir = 8
 	},
+/obj/machinery/requests_console{
+	department = "APNW Room";
+	name = "Atmospherics RC";
+	pixel_x = -32
+	},
 /turf/open/floor/monotile/steel,
 /area/hallway/nsv/deck2/primary)
 "It" = (
@@ -11416,6 +11442,9 @@
 	},
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
 	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
 /turf/open/floor/monotile/steel,
 /area/hallway/nsv/deck2/primary)
@@ -11668,7 +11697,8 @@
 	department = "Brig";
 	departmentType = 5;
 	name = "Brig RC";
-	pixel_y = -32
+	pixel_y = -32;
+	payment_department = "SEC"
 	},
 /obj/machinery/light,
 /turf/open/floor/monotile/steel,
@@ -11712,10 +11742,12 @@
 /turf/open/floor/monotile/steel,
 /area/nsv/weapons)
 "JR" = (
-/obj/structure/lattice/catwalk/over/ship,
-/obj/machinery/light/floor,
-/turf/open/floor/monotile/steel,
-/area/nsv/weapons)
+/obj/structure/lattice/catwalk,
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/open/space/basic,
+/area/space/nearstation)
 "JS" = (
 /obj/effect/spawner/structure/window/reinforced,
 /obj/structure/cable{
@@ -12065,7 +12097,8 @@
 	departmentType = 2;
 	name = "Robotics RC";
 	pixel_x = 31;
-	receive_ore_updates = 1
+	receive_ore_updates = 1;
+	payment_department = "SCI"
 	},
 /turf/open/floor/monotile/dark,
 /area/science)
@@ -12303,6 +12336,23 @@
 "Ly" = (
 /turf/closed/wall/r_wall,
 /area/nsv/weapons/fore)
+"Lz" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/solar{
+	id = "starboardsolar";
+	name = "Starboard Solar Array"
+	},
+/turf/open/floor/plasteel/airless/solarpanel,
+/area/space/nearstation)
 "LA" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12500,16 +12550,20 @@
 /turf/open/floor/monotile/dark,
 /area/nsv/weapons/fore)
 "Md" = (
+/obj/effect/turf_decal/tile/ship/orange{
+	dir = 8
+	},
+/obj/effect/turf_decal/tile/ship/orange,
 /obj/machinery/requests_console{
 	color = list(0,1,0,1,0,0,0,0,1,0,0,0);
-	department = "Munitions";
+	department = "Artillery Bay";
 	departmentType = 3;
 	name = "Munitions requests console";
-	pixel_y = -32
+	pixel_y = -32;
+	payment_department = "MUN"
 	},
-/obj/structure/ladder,
-/turf/open/floor/monotile/dark,
-/area/nsv/weapons)
+/turf/open/floor/monotile/steel,
+/area/nsv/weapons/fore)
 "Me" = (
 /obj/effect/turf_decal/box/corners{
 	dir = 1
@@ -12973,9 +13027,6 @@
 /turf/open/floor/plating,
 /area/nsv/weapons/fore)
 "NC" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-9"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -12983,6 +13034,9 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/open/floor/durasteel/alt,
 /area/hallway/nsv/deck2/primary)
 "ND" = (
@@ -13399,15 +13453,8 @@
 /turf/open/floor/monotile/dark,
 /area/ai_monitored/security/armory)
 "OH" = (
-/obj/structure/lattice/catwalk,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/turf/open/space/basic,
-/area/space/nearstation)
+/turf/open/floor/plasteel/grid/steel,
+/area/hallway/secondary/exit/departure_lounge)
 "OI" = (
 /obj/machinery/door/airlock/ship/external/glass{
 	name = "Pressurization Chamber";
@@ -13565,6 +13612,9 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
 /obj/structure/cable{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
 	},
 /turf/open/floor/monotile/steel,
 /area/hallway/nsv/deck2/primary)
@@ -13734,11 +13784,22 @@
 /turf/open/floor/plating,
 /area/maintenance/nsv/deck2/port)
 "PM" = (
-/obj/structure/cable{
+/obj/machinery/door/firedoor/border_only{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only{
+	dir = 4
+	},
+/obj/effect/turf_decal/ship/delivery/yellow,
+/obj/effect/landmark/zebra_interlock_point,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/open/floor/plasteel/grid/steel,
-/area/hallway/secondary/exit/departure_lounge)
+/turf/open/floor/monotile/steel,
+/area/hallway/nsv/deck2/primary)
 "PO" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
@@ -13997,9 +14058,6 @@
 	},
 /obj/effect/turf_decal/ship/delivery/yellow,
 /obj/effect/landmark/zebra_interlock_point,
-/obj/structure/cable/yellow{
-	icon_state = "6-9"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -14725,7 +14783,7 @@
 	},
 /obj/machinery/newscaster/directional/east,
 /turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "Sv" = (
 /obj/effect/turf_decal/ship/techfloor{
 	dir = 6
@@ -14880,6 +14938,9 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
 	dir = 4
 	},
 /turf/open/floor/plasteel/grid/steel,
@@ -15046,7 +15107,7 @@
 "Tv" = (
 /obj/machinery/light/small,
 /turf/open/floor/monotile/steel,
-/area/hallway/secondary/exit/departure_lounge)
+/area/hallway/nsv/deck2/primary)
 "Tw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -15114,7 +15175,8 @@
 /obj/machinery/requests_console{
 	department = "Chapel";
 	departmentType = 2;
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "CIV"
 	},
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/wood,
@@ -15278,7 +15340,8 @@
 	department = "Armory";
 	departmentType = 5;
 	name = "Armory RC";
-	pixel_y = 26
+	pixel_y = 26;
+	payment_department = "SEC"
 	},
 /turf/open/floor/monotile/dark,
 /area/ai_monitored/security/armory)
@@ -15377,7 +15440,7 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "1-6"
+	icon_state = "1-2"
 	},
 /turf/open/floor/durasteel/alt,
 /area/hallway/nsv/deck2/primary)
@@ -15409,7 +15472,7 @@
 /obj/item/rcd_ammo/large,
 /obj/item/rcd_ammo/large,
 /turf/open/floor/monotile/steel,
-/area/hallway/secondary/exit/departure_lounge)
+/area/hallway/nsv/deck2/primary)
 "UB" = (
 /obj/effect/turf_decal/stripes/line,
 /turf/open/floor/monotile/dark/airless,
@@ -15768,7 +15831,7 @@
 /obj/item/clothing/gloves/color/yellow,
 /obj/item/holosign_creator/atmos,
 /turf/open/floor/monotile/steel,
-/area/hallway/secondary/exit/departure_lounge)
+/area/hallway/nsv/deck2/primary)
 "VC" = (
 /turf/open/floor/plating,
 /area/nsv/weapons/fore)
@@ -15841,7 +15904,8 @@
 	departmentType = 2;
 	name = "Science Requests Console";
 	pixel_y = -30;
-	receive_ore_updates = 1
+	receive_ore_updates = 1;
+	payment_department = "SCI"
 	},
 /obj/effect/landmark/start/scientist,
 /turf/open/floor/monotile/steel,
@@ -16373,6 +16437,9 @@
 	dir = 8
 	},
 /obj/effect/turf_decal/tile/ship/blue,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/open/floor/durasteel/alt,
 /area/hallway/nsv/deck2/primary)
 "XF" = (
@@ -16786,21 +16853,23 @@
 /obj/structure/disposalpipe/segment{
 	dir = 10
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 10
+	},
 /turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "YZ" = (
-/obj/effect/turf_decal/ship/delivery/yellow,
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/firedoor/border_only{
-	dir = 1
-	},
-/obj/effect/landmark/zebra_interlock_point,
 /obj/structure/cable/yellow{
-	icon_state = "6-9"
+	icon_state = "2-8"
 	},
-/obj/structure/disposalpipe/segment,
-/turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/open/floor/plating/airless,
+/area/space/nearstation)
 "Zb" = (
 /obj/structure/lattice/catwalk,
 /obj/structure/cable/yellow{
@@ -16881,12 +16950,12 @@
 	dir = 4
 	},
 /turf/open/floor/plasteel/grid/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "Zm" = (
 /obj/structure/chair,
 /obj/machinery/airalarm/directional/north,
 /turf/open/floor/monotile/steel,
-/area/hallway/nsv/deck2/primary)
+/area/hallway/secondary/exit/departure_lounge)
 "Zn" = (
 /obj/structure/closet/crate{
 	opened = 1
@@ -17401,6 +17470,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (2,1,1) = {"
 Nh
@@ -17658,6 +17731,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (3,1,1) = {"
 Nh
@@ -17915,6 +17992,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (4,1,1) = {"
 Nh
@@ -18172,6 +18253,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (5,1,1) = {"
 Nh
@@ -18429,6 +18514,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (6,1,1) = {"
 Nh
@@ -18686,6 +18775,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (7,1,1) = {"
 Nh
@@ -18943,6 +19036,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (8,1,1) = {"
 Nh
@@ -19200,6 +19297,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (9,1,1) = {"
 Nh
@@ -19457,6 +19558,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (10,1,1) = {"
 Nh
@@ -19714,6 +19819,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (11,1,1) = {"
 Nh
@@ -19971,6 +20080,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (12,1,1) = {"
 Nh
@@ -20228,6 +20341,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (13,1,1) = {"
 Nh
@@ -20485,6 +20602,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (14,1,1) = {"
 Nh
@@ -20742,6 +20863,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (15,1,1) = {"
 Nh
@@ -20999,6 +21124,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (16,1,1) = {"
 Nh
@@ -21256,6 +21385,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (17,1,1) = {"
 Nh
@@ -21513,6 +21646,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (18,1,1) = {"
 Nh
@@ -21770,6 +21907,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (19,1,1) = {"
 Nh
@@ -22027,6 +22168,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (20,1,1) = {"
 Nh
@@ -22284,6 +22429,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (21,1,1) = {"
 Nh
@@ -22541,6 +22690,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (22,1,1) = {"
 Nh
@@ -22798,6 +22951,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (23,1,1) = {"
 Nh
@@ -23055,6 +23212,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (24,1,1) = {"
 Nh
@@ -23312,6 +23473,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (25,1,1) = {"
 Nh
@@ -23569,6 +23734,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (26,1,1) = {"
 Nh
@@ -23826,6 +23995,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (27,1,1) = {"
 Nh
@@ -24083,6 +24256,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (28,1,1) = {"
 Nh
@@ -24340,6 +24517,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (29,1,1) = {"
 Nh
@@ -24597,6 +24778,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (30,1,1) = {"
 Nh
@@ -24854,6 +25039,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (31,1,1) = {"
 Nh
@@ -25111,6 +25300,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (32,1,1) = {"
 Nh
@@ -25368,6 +25561,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (33,1,1) = {"
 Nh
@@ -25625,6 +25822,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (34,1,1) = {"
 Nh
@@ -25882,6 +26083,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (35,1,1) = {"
 Nh
@@ -26139,6 +26344,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (36,1,1) = {"
 Nh
@@ -26396,6 +26605,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (37,1,1) = {"
 Nh
@@ -26653,6 +26866,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (38,1,1) = {"
 Nh
@@ -26910,6 +27127,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (39,1,1) = {"
 Nh
@@ -27167,6 +27388,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (40,1,1) = {"
 Nh
@@ -27424,6 +27649,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (41,1,1) = {"
 Nh
@@ -27681,6 +27910,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (42,1,1) = {"
 Nh
@@ -27938,6 +28171,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (43,1,1) = {"
 Nh
@@ -28195,6 +28432,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (44,1,1) = {"
 Nh
@@ -28452,6 +28693,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (45,1,1) = {"
 Nh
@@ -28709,6 +28954,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (46,1,1) = {"
 Nh
@@ -28966,6 +29215,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (47,1,1) = {"
 Nh
@@ -29223,6 +29476,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (48,1,1) = {"
 Nh
@@ -29480,6 +29737,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (49,1,1) = {"
 Nh
@@ -29737,6 +29998,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (50,1,1) = {"
 Nh
@@ -29994,6 +30259,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (51,1,1) = {"
 Nh
@@ -30251,6 +30520,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (52,1,1) = {"
 Nh
@@ -30508,6 +30781,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (53,1,1) = {"
 Nh
@@ -30765,6 +31042,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (54,1,1) = {"
 Nh
@@ -31022,6 +31303,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (55,1,1) = {"
 Nh
@@ -31279,6 +31564,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (56,1,1) = {"
 Nh
@@ -31536,6 +31825,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (57,1,1) = {"
 Nh
@@ -31793,6 +32086,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (58,1,1) = {"
 Nh
@@ -32050,6 +32347,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (59,1,1) = {"
 Nh
@@ -32307,6 +32608,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (60,1,1) = {"
 Nh
@@ -32564,6 +32869,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (61,1,1) = {"
 Nh
@@ -32821,6 +33130,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (62,1,1) = {"
 Nh
@@ -33078,6 +33391,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (63,1,1) = {"
 Nh
@@ -33335,6 +33652,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (64,1,1) = {"
 Nh
@@ -33592,6 +33913,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (65,1,1) = {"
 Nh
@@ -33849,6 +34174,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (66,1,1) = {"
 Nh
@@ -34106,6 +34435,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (67,1,1) = {"
 Nh
@@ -34363,6 +34696,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (68,1,1) = {"
 Nh
@@ -34620,6 +34957,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (69,1,1) = {"
 Nh
@@ -34877,6 +35218,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (70,1,1) = {"
 Nh
@@ -35134,6 +35479,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (71,1,1) = {"
 Nh
@@ -35391,6 +35740,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (72,1,1) = {"
 Nh
@@ -35648,6 +36001,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (73,1,1) = {"
 Nh
@@ -35905,6 +36262,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (74,1,1) = {"
 Nh
@@ -36162,6 +36523,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (75,1,1) = {"
 Nh
@@ -36419,6 +36784,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (76,1,1) = {"
 Nh
@@ -36676,6 +37045,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (77,1,1) = {"
 Nh
@@ -36933,6 +37306,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (78,1,1) = {"
 Nh
@@ -37190,6 +37567,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (79,1,1) = {"
 Nh
@@ -37447,6 +37828,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (80,1,1) = {"
 Nh
@@ -37704,6 +38089,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (81,1,1) = {"
 Nh
@@ -37961,6 +38350,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (82,1,1) = {"
 Nh
@@ -38218,6 +38611,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (83,1,1) = {"
 Nh
@@ -38475,6 +38872,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (84,1,1) = {"
 Nh
@@ -38732,6 +39133,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (85,1,1) = {"
 Nh
@@ -38989,6 +39394,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (86,1,1) = {"
 Nh
@@ -39246,6 +39655,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (87,1,1) = {"
 Nh
@@ -39503,6 +39916,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (88,1,1) = {"
 Nh
@@ -39760,6 +40177,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (89,1,1) = {"
 Nh
@@ -40017,6 +40438,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (90,1,1) = {"
 Nh
@@ -40274,6 +40699,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (91,1,1) = {"
 Nh
@@ -40531,6 +40960,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (92,1,1) = {"
 Nh
@@ -40788,6 +41221,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (93,1,1) = {"
 Nh
@@ -41045,6 +41482,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (94,1,1) = {"
 Nh
@@ -41302,6 +41743,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (95,1,1) = {"
 Nh
@@ -41432,13 +41877,13 @@ gS
 gS
 gS
 vD
-Ge
+Gi
 MO
 MO
 MO
 MO
 MO
-Ge
+YZ
 le
 Ge
 ue
@@ -41559,6 +42004,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (96,1,1) = {"
 Nh
@@ -41689,13 +42138,13 @@ cH
 gS
 gS
 vD
-Ge
+Gi
 MO
 bC
 WJ
 bC
 MO
-Ge
+YZ
 le
 Ge
 ue
@@ -41816,6 +42265,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (97,1,1) = {"
 Nh
@@ -42073,6 +42526,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (98,1,1) = {"
 Nh
@@ -42330,6 +42787,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (99,1,1) = {"
 Nh
@@ -42587,6 +43048,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (100,1,1) = {"
 Nh
@@ -42844,6 +43309,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (101,1,1) = {"
 Nh
@@ -43101,6 +43570,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (102,1,1) = {"
 Nh
@@ -43358,6 +43831,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (103,1,1) = {"
 Nh
@@ -43615,6 +44092,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (104,1,1) = {"
 Nh
@@ -43872,6 +44353,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (105,1,1) = {"
 Nh
@@ -44129,6 +44614,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (106,1,1) = {"
 Nh
@@ -44386,6 +44875,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (107,1,1) = {"
 Nh
@@ -44643,6 +45136,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (108,1,1) = {"
 Nh
@@ -44900,6 +45397,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (109,1,1) = {"
 Nh
@@ -45157,6 +45658,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (110,1,1) = {"
 Nh
@@ -45414,6 +45919,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (111,1,1) = {"
 Nh
@@ -45671,6 +46180,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (112,1,1) = {"
 Nh
@@ -45808,7 +46321,7 @@ vm
 FU
 zG
 Us
-jt
+Us
 uk
 rS
 Je
@@ -45824,11 +46337,11 @@ zq
 Qc
 mL
 xi
-an
-an
-an
-an
-iX
+JR
+wG
+wG
+wG
+KD
 Nh
 aj
 Nh
@@ -45928,6 +46441,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (113,1,1) = {"
 Nh
@@ -46065,7 +46582,7 @@ Tw
 zY
 pR
 zY
-wG
+zY
 lu
 vd
 pl
@@ -46185,6 +46702,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (114,1,1) = {"
 Nh
@@ -46323,7 +46844,7 @@ QS
 QJ
 uq
 mv
-YZ
+Tg
 bD
 un
 XE
@@ -46340,8 +46861,8 @@ mL
 kD
 XG
 ns
-ns
-ns
+uv
+uv
 sY
 ms
 aj
@@ -46442,6 +46963,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (115,1,1) = {"
 Nh
@@ -46580,10 +47105,10 @@ zI
 zI
 zI
 zI
-KJ
+sC
 Qv
 kq
-pc
+PM
 IW
 IW
 Eg
@@ -46699,6 +47224,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (116,1,1) = {"
 Nh
@@ -46839,7 +47368,7 @@ lh
 zI
 zI
 zf
-dE
+un
 bB
 qI
 wb
@@ -46852,11 +47381,11 @@ Ie
 nI
 mL
 kD
-iX
-iX
-iX
-iX
-iX
+XG
+ns
+uv
+uv
+KD
 Nh
 jy
 Nh
@@ -46956,6 +47485,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (117,1,1) = {"
 Nh
@@ -47213,6 +47746,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (118,1,1) = {"
 Nh
@@ -47368,8 +47905,8 @@ mL
 kD
 XG
 ns
-ns
-ns
+uv
+uv
 KD
 Nh
 ms
@@ -47470,6 +48007,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (119,1,1) = {"
 Nh
@@ -47727,6 +48268,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (120,1,1) = {"
 Nh
@@ -47880,11 +48425,11 @@ Ie
 zy
 yC
 Tj
-OH
-iX
-iX
-iX
-iX
+Zb
+ns
+uv
+uv
+KD
 ms
 aj
 Nh
@@ -47984,6 +48529,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (121,1,1) = {"
 Nh
@@ -48241,6 +48790,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (122,1,1) = {"
 Nh
@@ -48396,9 +48949,9 @@ bJ
 Tj
 Zb
 ns
-ns
-ns
-OH
+uv
+uv
+KD
 Nh
 aj
 Nh
@@ -48498,6 +49051,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (123,1,1) = {"
 Nh
@@ -48643,11 +49200,11 @@ qo
 qi
 lL
 rL
-ob
-ob
-ob
-ob
-ob
+Kd
+Kd
+Kd
+Kd
+Kd
 JE
 dy
 mL
@@ -48755,6 +49312,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (124,1,1) = {"
 Nh
@@ -48874,7 +49435,7 @@ iH
 tQ
 dC
 eM
-hx
+Xv
 Om
 hL
 in
@@ -48904,14 +49465,14 @@ qT
 Bv
 br
 lG
-ob
+Kd
 qL
 cT
 Tj
-Ws
-Ws
-Ws
-Ws
+Bi
+Bi
+Bi
+Bi
 se
 Nh
 aj
@@ -49012,6 +49573,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (125,1,1) = {"
 Nh
@@ -49123,9 +49688,9 @@ Nh
 gS
 gS
 cQ
-Of
-eO
-xW
+sq
+Lz
+ty
 kH
 iC
 Hi
@@ -49161,7 +49726,7 @@ qT
 Jw
 wW
 RS
-ob
+Kd
 oI
 DZ
 oI
@@ -49269,6 +49834,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (126,1,1) = {"
 Nh
@@ -49418,7 +49987,7 @@ qT
 Op
 rW
 DU
-ob
+Kd
 xR
 Qh
 MX
@@ -49526,6 +50095,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (127,1,1) = {"
 Nh
@@ -49675,9 +50248,9 @@ Eo
 Qk
 rW
 lG
-ob
+Kd
 TB
-LH
+vc
 kz
 Lr
 af
@@ -49783,6 +50356,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (128,1,1) = {"
 Nh
@@ -49932,7 +50509,7 @@ xE
 XU
 OO
 vC
-ob
+Kd
 Ff
 cv
 Uo
@@ -50040,6 +50617,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (129,1,1) = {"
 Nh
@@ -50189,8 +50770,8 @@ Kd
 Kd
 Kd
 Kd
+Kd
 oI
-kr
 ud
 oI
 ap
@@ -50297,6 +50878,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (130,1,1) = {"
 Nh
@@ -50454,7 +51039,7 @@ AS
 BS
 BS
 ye
-JT
+dE
 Od
 Nh
 Nh
@@ -50554,6 +51139,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (131,1,1) = {"
 Nh
@@ -50705,13 +51294,13 @@ Mx
 Tv
 YQ
 vS
-lC
+OH
 BY
 Yw
 ND
-lC
+OH
 Lm
-JT
+dE
 Od
 Nh
 Nh
@@ -50811,6 +51400,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (132,1,1) = {"
 Nh
@@ -50962,11 +51555,11 @@ YQ
 VA
 YQ
 Zm
-Jk
+ob
 aw
 ei
-lC
-lC
+OH
+OH
 SF
 Ni
 Ni
@@ -51068,6 +51661,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (133,1,1) = {"
 Nh
@@ -51222,8 +51819,8 @@ Ni
 zA
 dd
 Zl
-lC
-lC
+OH
+OH
 CC
 Qe
 kv
@@ -51325,6 +51922,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (134,1,1) = {"
 Nh
@@ -51433,7 +52034,7 @@ Nh
 kD
 kH
 ga
-LU
+sC
 wl
 fG
 vO
@@ -51475,12 +52076,12 @@ ft
 rH
 sQ
 Zw
-ew
-Jk
+xF
+ob
 aw
 gH
 lr
-lC
+OH
 Cz
 Ni
 Ni
@@ -51582,6 +52183,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (135,1,1) = {"
 Nh
@@ -51690,7 +52295,7 @@ Nh
 kD
 kH
 Kh
-LU
+sC
 wl
 kB
 aC
@@ -51736,8 +52341,8 @@ Xd
 lM
 yY
 Ta
-eQ
-Dn
+hx
+lC
 Au
 Qe
 kv
@@ -51839,6 +52444,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (136,1,1) = {"
 Nh
@@ -51947,7 +52556,7 @@ Nh
 kD
 kH
 Lu
-LU
+sC
 wl
 kM
 Kw
@@ -51989,7 +52598,7 @@ OW
 jF
 yq
 BX
-JT
+dE
 kY
 kj
 Ky
@@ -52096,6 +52705,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (137,1,1) = {"
 Nh
@@ -52353,6 +52966,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (138,1,1) = {"
 Nh
@@ -52610,6 +53227,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (139,1,1) = {"
 Nh
@@ -52867,6 +53488,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (140,1,1) = {"
 Nh
@@ -53124,6 +53749,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (141,1,1) = {"
 Nh
@@ -53381,6 +54010,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (142,1,1) = {"
 Nh
@@ -53638,6 +54271,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (143,1,1) = {"
 Nh
@@ -53895,6 +54532,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (144,1,1) = {"
 Nh
@@ -54152,6 +54793,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (145,1,1) = {"
 Nh
@@ -54409,6 +55054,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (146,1,1) = {"
 Nh
@@ -54666,6 +55315,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (147,1,1) = {"
 Nh
@@ -54923,6 +55576,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (148,1,1) = {"
 Nh
@@ -55180,6 +55837,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (149,1,1) = {"
 Nh
@@ -55437,6 +56098,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (150,1,1) = {"
 Nh
@@ -55560,10 +56225,6 @@ Ly
 Ly
 Ly
 eY
-eY
-eY
-eY
-eY
 GF
 gD
 Ql
@@ -55579,7 +56240,7 @@ qq
 qq
 mP
 yW
-Md
+zK
 eY
 OE
 jS
@@ -55602,6 +56263,10 @@ Eb
 Ho
 Pm
 Od
+Nh
+Nh
+Nh
+Nh
 Nh
 Nh
 Nh
@@ -55856,7 +56521,7 @@ sH
 sH
 sH
 sH
-zc
+jt
 Jq
 Od
 Nh
@@ -55955,6 +56620,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (152,1,1) = {"
 Nh
@@ -56212,6 +56881,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (153,1,1) = {"
 Nh
@@ -56469,6 +57142,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (154,1,1) = {"
 Nh
@@ -56726,6 +57403,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (155,1,1) = {"
 Nh
@@ -56983,6 +57664,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (156,1,1) = {"
 Nh
@@ -57240,6 +57925,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (157,1,1) = {"
 Nh
@@ -57497,6 +58186,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (158,1,1) = {"
 Nh
@@ -57754,6 +58447,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (159,1,1) = {"
 Nh
@@ -58011,6 +58708,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (160,1,1) = {"
 Nh
@@ -58268,6 +58969,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (161,1,1) = {"
 Nh
@@ -58525,6 +59230,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (162,1,1) = {"
 Nh
@@ -58782,6 +59491,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (163,1,1) = {"
 Nh
@@ -58905,7 +59618,7 @@ yE
 Ek
 zr
 jY
-za
+Md
 Ly
 Zd
 iV
@@ -59039,6 +59752,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (164,1,1) = {"
 Nh
@@ -59296,6 +60013,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (165,1,1) = {"
 Nh
@@ -59553,6 +60274,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (166,1,1) = {"
 Nh
@@ -59810,6 +60535,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (167,1,1) = {"
 Nh
@@ -60067,6 +60796,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (168,1,1) = {"
 Nh
@@ -60324,6 +61057,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (169,1,1) = {"
 Nh
@@ -60581,6 +61318,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (170,1,1) = {"
 Nh
@@ -60838,6 +61579,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (171,1,1) = {"
 Nh
@@ -61095,6 +61840,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (172,1,1) = {"
 Nh
@@ -61352,6 +62101,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (173,1,1) = {"
 Nh
@@ -61609,6 +62362,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (174,1,1) = {"
 Nh
@@ -61866,6 +62623,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (175,1,1) = {"
 Nh
@@ -62123,6 +62884,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (176,1,1) = {"
 Nh
@@ -62380,6 +63145,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (177,1,1) = {"
 Nh
@@ -62637,6 +63406,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (178,1,1) = {"
 Nh
@@ -62894,6 +63667,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (179,1,1) = {"
 Nh
@@ -63151,6 +63928,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (180,1,1) = {"
 Nh
@@ -63408,6 +64189,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (181,1,1) = {"
 Nh
@@ -63665,6 +64450,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (182,1,1) = {"
 Nh
@@ -63922,6 +64711,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (183,1,1) = {"
 Nh
@@ -64179,6 +64972,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (184,1,1) = {"
 Nh
@@ -64436,6 +65233,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (185,1,1) = {"
 Nh
@@ -64693,6 +65494,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (186,1,1) = {"
 Nh
@@ -64950,6 +65755,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (187,1,1) = {"
 Nh
@@ -65207,6 +66016,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (188,1,1) = {"
 Nh
@@ -65464,6 +66277,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (189,1,1) = {"
 Nh
@@ -65721,6 +66538,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (190,1,1) = {"
 Nh
@@ -65978,6 +66799,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (191,1,1) = {"
 Nh
@@ -66235,6 +67060,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (192,1,1) = {"
 Nh
@@ -66492,6 +67321,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (193,1,1) = {"
 Nh
@@ -66749,6 +67582,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (194,1,1) = {"
 Nh
@@ -67006,6 +67843,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (195,1,1) = {"
 Nh
@@ -67263,6 +68104,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (196,1,1) = {"
 Nh
@@ -67520,6 +68365,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (197,1,1) = {"
 Nh
@@ -67777,6 +68626,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (198,1,1) = {"
 Nh
@@ -68034,6 +68887,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (199,1,1) = {"
 Nh
@@ -68291,6 +69148,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (200,1,1) = {"
 Nh
@@ -68548,6 +69409,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (201,1,1) = {"
 Nh
@@ -68805,6 +69670,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (202,1,1) = {"
 Nh
@@ -69062,6 +69931,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (203,1,1) = {"
 Nh
@@ -69319,6 +70192,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (204,1,1) = {"
 Nh
@@ -69576,6 +70453,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (205,1,1) = {"
 Nh
@@ -69833,6 +70714,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (206,1,1) = {"
 Nh
@@ -70090,6 +70975,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (207,1,1) = {"
 Nh
@@ -70347,6 +71236,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (208,1,1) = {"
 Nh
@@ -70604,6 +71497,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (209,1,1) = {"
 Nh
@@ -70861,6 +71758,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (210,1,1) = {"
 Nh
@@ -71118,6 +72019,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (211,1,1) = {"
 Nh
@@ -71375,6 +72280,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (212,1,1) = {"
 Nh
@@ -71632,6 +72541,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (213,1,1) = {"
 Nh
@@ -71889,6 +72802,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (214,1,1) = {"
 Nh
@@ -72146,6 +73063,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (215,1,1) = {"
 Nh
@@ -72403,6 +73324,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (216,1,1) = {"
 Nh
@@ -72660,6 +73585,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (217,1,1) = {"
 Nh
@@ -72917,6 +73846,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (218,1,1) = {"
 Nh
@@ -73174,6 +74107,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (219,1,1) = {"
 Nh
@@ -73431,6 +74368,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (220,1,1) = {"
 Nh
@@ -73688,6 +74629,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (221,1,1) = {"
 Nh
@@ -73945,6 +74890,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (222,1,1) = {"
 Nh
@@ -74202,6 +75151,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (223,1,1) = {"
 Nh
@@ -74459,6 +75412,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (224,1,1) = {"
 Nh
@@ -74716,6 +75673,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (225,1,1) = {"
 Nh
@@ -74973,6 +75934,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (226,1,1) = {"
 Nh
@@ -75230,6 +76195,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (227,1,1) = {"
 Nh
@@ -75487,6 +76456,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (228,1,1) = {"
 Nh
@@ -75744,6 +76717,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (229,1,1) = {"
 Nh
@@ -76001,6 +76978,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (230,1,1) = {"
 Nh
@@ -76258,6 +77239,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (231,1,1) = {"
 Nh
@@ -76515,6 +77500,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (232,1,1) = {"
 Nh
@@ -76772,6 +77761,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (233,1,1) = {"
 Nh
@@ -77029,6 +78022,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (234,1,1) = {"
 Nh
@@ -77286,6 +78283,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (235,1,1) = {"
 Nh
@@ -77543,6 +78544,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (236,1,1) = {"
 Nh
@@ -77800,6 +78805,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (237,1,1) = {"
 Nh
@@ -78057,6 +79066,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (238,1,1) = {"
 Nh
@@ -78314,6 +79327,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (239,1,1) = {"
 Nh
@@ -78571,6 +79588,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (240,1,1) = {"
 Nh
@@ -78828,6 +79849,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (241,1,1) = {"
 Nh
@@ -79085,6 +80110,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (242,1,1) = {"
 Nh
@@ -79342,6 +80371,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (243,1,1) = {"
 Nh
@@ -79599,6 +80632,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (244,1,1) = {"
 Nh
@@ -79856,6 +80893,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (245,1,1) = {"
 Nh
@@ -80113,6 +81154,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (246,1,1) = {"
 Nh
@@ -80370,6 +81415,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (247,1,1) = {"
 Nh
@@ -80627,6 +81676,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (248,1,1) = {"
 Nh
@@ -80884,6 +81937,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (249,1,1) = {"
 Nh
@@ -81141,6 +82198,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (250,1,1) = {"
 Nh
@@ -81398,6 +82459,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (251,1,1) = {"
 Nh
@@ -81655,6 +82720,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (252,1,1) = {"
 Nh
@@ -81912,6 +82981,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (253,1,1) = {"
 Nh
@@ -82169,6 +83242,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (254,1,1) = {"
 Nh
@@ -82426,6 +83503,10 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
 (255,1,1) = {"
 Nh
@@ -82683,4 +83764,8 @@ Nh
 Nh
 Nh
 Nh
+sC
+sC
+sC
+sC
 "}
