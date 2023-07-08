@@ -8,6 +8,7 @@ GLOBAL_LIST_INIT(computer_beeps, list('nsv13/sound/effects/computer/beep.ogg','n
 	name = "Ship console"
 	icon_keyboard = "helm_key"
 	var/obj/structure/overmap/linked
+	var/datum/overmap/linked_js = null
 	var/position = null
 	var/can_sound = TRUE //Warning sound placeholder
 	var/sound_cooldown = 10 SECONDS //For big warnings like enemies firing on you, that we don't want repeating over and over
@@ -35,8 +36,9 @@ GLOBAL_LIST_INIT(computer_beeps, list('nsv13/sound/effects/computer/beep.ogg','n
 
 /obj/machinery/computer/ship/proc/has_overmap()
 	linked = get_overmap()
-	if(linked)
+	if(linked && istype(linked))
 		set_position(linked)
+	linked_js = linked
 	return linked
 
 /obj/machinery/computer/ship/proc/set_position(obj/structure/overmap/OM)
@@ -113,20 +115,31 @@ GLOBAL_LIST_INIT(computer_beeps, list('nsv13/sound/effects/computer/beep.ogg','n
 	. = ..()
 	if(!linked)
 		return
-	if(isobserver(user))
-		var/mob/dead/observer/O = user
-		O.ManualFollow(linked)
-		return
-	playsound(src, 'nsv13/sound/effects/computer/hum.ogg', 100, 1)
-	linked.observe_ship(user)
+	//if(isobserver(user))
+		//var/mob/dead/observer/O = user
+		//O.ManualFollow(linked)
+		//return
+
+	//linked.observe_ship(user)
+	ui_interact(user)
 	internal_dradis.attack_hand(user)
 
-/obj/machinery/computer/ship/viewscreen/ui_interact(mob/user)
+/obj/machinery/computer/ship/viewscreen/ui_interact(mob/user, datum/tgui/ui)
 	if(!has_overmap())
+		visible_message("<span class='danger'>[icon2html(src, viewers(src))] Microcontrollers corrupt. Unable to locate compatible ship.</span>")
 		return
-	if(isobserver(user))
-		var/mob/dead/observer/O = user
-		O.ManualFollow(linked)
-		return
-	playsound(src, 'nsv13/sound/effects/computer/hum.ogg', 100, 1)
-	linked.start_piloting(user, OVERMAP_USER_ROLE_OBSERVER)
+	//to_chat(world, "Overmap: UI update...")
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		if(!isobserver(user))
+			playsound(src, 'nsv13/sound/effects/computer/hum.ogg', 100, 1)
+		ui = new(user, src, "JSOvermap")
+		ui.open()
+		user.AddComponent(/datum/component/overmap_piloting/observer, linked_js, ui)
+	//linked.start_piloting(user, OVERMAP_USER_ROLE_OBSERVER)
+
+/obj/machinery/computer/ship/viewscreen/ui_data(mob/user)
+	. = SSJSOvermap.ui_data_for(user, linked_js)
+
+/obj/machinery/computer/ship/viewscreen/ui_static_data(mob/user)
+	. = SSJSOvermap.ui_static_data_for(user)

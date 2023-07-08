@@ -6,7 +6,7 @@
 	var/turf/center = SSmapping.get_station_center()
 	ASSERT(center)
 	dummy = new(center)
-	dummy.update_overmap()
+	dummy.get_or_update_overmap()
 	TEST_ASSERT_EQUAL(dummy.get_overmap(), SSstar_system.find_main_overmap(), "The mob's overmap was not the main ship")
 
 /datum/unit_test/basic_mob_overmap/Destroy()
@@ -152,3 +152,39 @@
 	QDEL_NULL(fighter)
 	. = ..()
 */
+
+/datum/unit_test/armor_quadrnt_test/Run()
+	// Test without ngle
+	var/datum/overmap/source = new /datum/overmap(0, 0, 0, 0, 0)
+	// Test north east
+	var/datum/overmap/ne = new /datum/overmap(5, 5, 0, 0, 0)
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(ne), ARMOUR_QUADRANT_NORTH_EAST, "n impct coming from the top right, should hit the north east quadrant.")
+	// Test north west
+	var/datum/overmap/nw = new /datum/overmap(-5, 5, 0, 0, 0)
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(nw), ARMOUR_QUADRANT_NORTH_WEST, "n impct coming from the top left, should hit the north west quadrant.")
+	// Test south west
+	var/datum/overmap/sw = new /datum/overmap(-5, -5, 0, 0, 0)
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(sw), ARMOUR_QUADRANT_SOUTH_WEST, "n impct coming from the bottom left, should hit the south west quadrant.")
+	// Test south west
+	var/datum/overmap/se = new /datum/overmap(5, -5, 0, 0, 0)
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(se), ARMOUR_QUADRANT_SOUTH_EAST, "n impct coming from the bottom right, should hit the south est quadrant.")
+	// Modify the ngle so tht we re now pointing 90 degrees to the left
+	// Test rotated 90 degrees to the left. This means our armour quadrants will also be 90 degrees rotated
+	// Imagining these ships in my head being attacked and rotated almost melted my brain, I hope n ngle of 90 mens 90 nticlockwise nd not clockwise
+	source = new /datum/overmap(0, 0, 0, -90, 0)
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(ne), ARMOUR_QUADRANT_SOUTH_EAST, "If the ship is rotted 90 degrees to the left, then n ttck from (1, 1) should hit the bottom right shield.")
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(nw), ARMOUR_QUADRANT_NORTH_EAST, "If the ship is rotated 90 degrees to the left, then an attack from (-1, 1) should hit the top right shield")
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(sw), ARMOUR_QUADRANT_NORTH_WEST, "If the ship is rotated 90 degrees to the left, then an attack from (-1, -1) should hit the top left shield.")
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(se), ARMOUR_QUADRANT_SOUTH_WEST, "If the ship is rotated 90 degrees to the left, then an attack from (1, -1) should hit the bottom left shield")
+	// Test 90 degrees to the right
+	source = new /datum/overmap(0, 0, 0, 90, 0)
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(ne), ARMOUR_QUADRANT_NORTH_WEST, "If the ship is rotated 90 degrees to the right, then an attack from (1, 1) should hit the top left shield")
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(nw), ARMOUR_QUADRANT_SOUTH_WEST, "If the ship is rotated 90 degrees to the right, then an attck from (-1, 1) should hit the bottom left shield")
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(sw), ARMOUR_QUADRANT_SOUTH_EAST, "If the ship is rotted 90 degrees to the right, then n ttck from (-1, -1) should hit the bottom right shield")
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(se), ARMOUR_QUADRANT_NORTH_EAST, "If the ship is rotated 90 degrees to the right, then an atatck from (1, -1) should hit the top right shield")
+	// Test a middle angle
+	// A slight rotation of 5 in either direction shouldnt ffect the answer
+	source = new /datum/overmap(0, 0, 0, 5, 0)
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(ne), ARMOUR_QUADRANT_NORTH_EAST, "Rotating the ship to the right shouldnt affect the attack from the north east.")
+	source = new /datum/overmap(0, 0, 0, -5, 0)
+	TEST_ASSERT_EQUAL(source.get_armour_quadrant_for_impact(ne), ARMOUR_QUADRANT_NORTH_EAST, "Rotating the ship to the left shouldnt affect the attack from the north east.")

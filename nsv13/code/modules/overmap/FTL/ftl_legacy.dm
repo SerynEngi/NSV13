@@ -165,8 +165,8 @@ A way for syndies to track where the player ship is going in advance, so they ca
 
 /obj/machinery/computer/ship/ftl_computer/has_overmap()
 	. = ..()
-	if(linked)
-		linked.ftl_drive = src
+	if(linked_js)
+		linked_js.ftl_drive.ftl_drive = src
 
 /obj/machinery/computer/ship/ftl_computer/attack_hand(mob/user)
 	if(!has_overmap())

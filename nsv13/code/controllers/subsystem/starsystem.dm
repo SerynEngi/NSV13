@@ -522,6 +522,8 @@ Returns a faction datum by its name (case insensitive!)
 		addtimer(CALLBACK(src, PROC_REF(generate_anomaly)), 15 SECONDS)
 	if(!CHECK_BITFIELD(src.system_traits, STARSYSTEM_NO_ASTEROIDS))
 		addtimer(CALLBACK(src, PROC_REF(spawn_asteroids)), 15 SECONDS)
+	//NSV13 - JS overmap... instance a map level for it.
+	instance_js_overmap_components()
 
 /datum/star_system/proc/create_wormhole()
 	var/list/potential_systems = list()

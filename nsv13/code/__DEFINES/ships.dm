@@ -1,3 +1,4 @@
+#define MASS_PROJECTILE 0.5
 #define MASS_TINY 1 //1 Player - Fighters
 #define MASS_SMALL 2 //2-5 Players - FoB/Mining Ship
 #define MASS_MEDIUM 3 //10-20 Players - Small Capital Ships

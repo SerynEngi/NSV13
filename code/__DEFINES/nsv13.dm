@@ -116,6 +116,7 @@ GLOBAL_DATUM_INIT(conquest_role_handler, /datum/conquest_role_handler, new)
 #define COMSIG_KB_OVERMAP_WEAPON4_DOWN "keybinding_overmap_weapon4_down"
 #define COMSIG_KB_VEHICLE_TOGGLE_BRAKES "keybinding_vehicle_toggle_brakes"
 #define COMSIG_KB_OVERMAP_UNLOCK_DOWN "keybinding_overmap_unlock_down"
+#define COMSIG_MOB_OVERMAP_CHANGE "mob_OM_change"			//! from base of mob/Move(): (atom/newloc, direct)
 
 #define OVERMAP_USER_ROLE_PILOT (1<<0)
 #define OVERMAP_USER_ROLE_GUNNER (1<<1)
@@ -126,10 +127,17 @@ GLOBAL_DATUM_INIT(conquest_role_handler, /datum/conquest_role_handler, new)
 #define HOLOMAP_EXTRA_STATIONMAPAREAS "stationareas"
 #define HOLOMAP_EXTRA_STATIONMAPSMALL "stationmapsmall"
 
-/// AI Hologram Related
-#define DUMMY_HUMAN_SLOT_HOLOFORM "dummy_holoform_generation" //NSV13 - AI Custom Holographic Form
+#define KM * 1000
+#define JS_OVERMAP_TACMAP_SQUARE 2
+#define JS_OVERMAP_TACMAP_TOTAL_SQUARES 26
+#define JS_OVERMAP_TACMAP_TILE_SIZE JS_OVERMAP_TACMAP_SQUARE KM
+#define JS_OVERMAP_TACMAP_SIZE JS_OVERMAP_TACMAP_TILE_SIZE * JS_OVERMAP_TACMAP_TOTAL_SQUARES
 
-#define CUSTOM_HOLOFORM_DELAY 10 SECONDS //prevents spamming to make lag. it's pretty expensive to do this.
+///User has NO rights and may only observe the ship.
+#define OVERMAP_CONTROL_RIGHTS_NONE 0
+///User is able to steer the ship.
+#define OVERMAP_CONTROL_RIGHTS_HELM 1 << 0
+///User is able to fire the ship's weaponry.
+#define OVERMAP_CONTROL_RIGHTS_GUNNER 1 << 1
 
-#define HOLOFORM_FILTER_AI "FILTER_AI"
-#define HOLOFORM_FILTER_STATIC "FILTER_STATIC"
+#define OVERMAP_CONTROL_RIGHTS_FULL OVERMAP_CONTROL_RIGHTS_HELM | OVERMAP_CONTROL_RIGHTS_GUNNER

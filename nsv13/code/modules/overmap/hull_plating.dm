@@ -44,7 +44,7 @@ Method to try locate an overmap object that we should attach to. Recursively cal
 
 /obj/structure/hull_plate/proc/try_find_parent()
 	if(tries <= 0)
-		message_admins("Hull plates in [get_area(src)] have no overmap object!")
+		//message_admins("Hull plates in [get_area(src)] have no overmap object!")
 		qdel(src) //This should be enough of a hint....
 		return
 	parent = get_overmap()

@@ -98,6 +98,10 @@
 	//Give verbs to stat
 	add_verb(verbs, TRUE)
 	become_hearing_sensitive()
+	//NSV13: JS overmap
+	RegisterSignal(src, COMSIG_MOB_OVERMAP_CHANGE, PROC_REF(get_or_update_overmap))
+	RegisterSignal(src, COMSIG_MOVABLE_Z_CHANGED, PROC_REF(get_or_update_overmap))
+	addtimer(CALLBACK(src, PROC_REF(get_or_update_overmap)), 5 SECONDS)
 
 /**
   * Generate the tag for this mob

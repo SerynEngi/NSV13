@@ -17,13 +17,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	if(OM.move_by_mouse) return
-	OM.keyboard_delta_angle_left = -15
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/rotate_left/up(client/user)
 	. = ..()
@@ -31,13 +26,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	if(OM.move_by_mouse) return
-	OM.keyboard_delta_angle_left = 0
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/rotate_right
 	key = "E"
@@ -52,13 +42,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	if(OM.move_by_mouse) return
-	OM.keyboard_delta_angle_right = 15
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/rotate_right/up(client/user)
 	. = ..()
@@ -66,13 +51,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	if(OM.move_by_mouse) return
-	OM.keyboard_delta_angle_right = 0
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 // Keys that are held down in other binding modes need both a down and an up to override correctly
 /datum/keybinding/overmap/boost
@@ -88,12 +68,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	OM.boost(NORTH)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/boost/up(client/user)
 	. = ..()
@@ -101,11 +77,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/toggle_brakes
 	key = "Alt"
@@ -120,15 +93,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	OM.toggle_brakes()
-	if(OM.helm && prob(80))
-		var/sound = pick(GLOB.computer_beeps)
-		playsound(OM.helm, sound, 100, 1)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/toggle_brakes/up(client/user)
 	. = ..()
@@ -136,11 +102,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 // Other ship controls
 /datum/keybinding/overmap/toggle_inertia
@@ -156,15 +119,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	OM.toggle_inertia()
-	if(OM.helm && prob(80))
-		var/sound = pick(GLOB.computer_beeps)
-		playsound(OM.helm, sound, 100, 1)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/toggle_move_mode
 	key = "C"
@@ -179,15 +135,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.pilot) return
-	OM.toggle_move_mode()
-	if(OM.helm && prob(80))
-		var/sound = pick(GLOB.computer_beeps)
-		playsound(OM.helm, sound, 100, 1)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/cycle_firemode
 	key = "Space"
@@ -202,15 +151,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.gunner) return
-	OM.cycle_firemode()
-	if(OM.tactical && prob(80))
-		var/sound = pick(GLOB.computer_beeps)
-		playsound(OM.tactical, sound, 100, 1)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 // Small craft - safeties and countermeasures
 
@@ -227,12 +169,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/small_craft/OM = M.overmap_ship
-	if(!istype(OM)) return
-
-	if(M != OM.pilot) return
-	OM.countermeasure()
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/toggle_safety
 	key = "Capslock"
@@ -247,15 +185,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/small_craft/OM = M.overmap_ship
-	if(!istype(OM)) return
-
-	if(M != OM.gunner) return
-	OM.toggle_safety()
-	if(OM.helm && prob(80))
-		var/sound = pick(GLOB.computer_beeps)
-		playsound(OM.helm, sound, 100, 1)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 // Weapon selection - this is overly complicated but probably useful as a proof of concept
 /datum/keybinding/overmap/weapon_1
@@ -271,12 +202,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.gunner) return
-	OM.select_weapon(1)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/weapon_2
 	key = "2"
@@ -291,12 +218,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.gunner) return
-	OM.select_weapon(2)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/weapon_3
 	key = "3"
@@ -311,12 +234,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.gunner) return
-	OM.select_weapon(3)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/weapon_4
 	key = "4"
@@ -331,12 +250,8 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.gunner) return
-	OM.select_weapon(4)
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE
 
 /datum/keybinding/overmap/unlock
 	key = "6"
@@ -351,9 +266,5 @@
 		return
 	if(!user.mob) return
 	var/mob/M = user.mob
-	var/obj/structure/overmap/OM = M.overmap_ship
-	if(!OM) return
-
-	if(M != OM.gunner) return
-	OM.dump_locks()
-	return TRUE
+	var/datum/component/overmap_piloting/piloting = M.GetComponent(/datum/component/overmap_piloting)
+	if(piloting) return TRUE

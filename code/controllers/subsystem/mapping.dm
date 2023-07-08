@@ -287,12 +287,18 @@ SUBSYSTEM_DEF(mapping)
 	INIT_ANNOUNCE("Loading [config.map_name]...")
 	LoadGroup(FailedZs, "Station", config.map_path, config.map_file, config.traits, ZTRAITS_STATION, orbital_body_type = /datum/orbital_object/z_linked/station)
 	//NSV13 load in the overmap Z-levels and create the main overmap that we'll need.
-	var/obj/structure/overmap/OM = instance_overmap(config.ship_type)
-	pass(OM)
+	//var/obj/structure/overmap/OM = instance_overmap(config.ship_type)
+	//pass(OM)
 	// Free boarding overmap/mining level
-	add_new_zlevel("Overmap treadmill [++world.maxz]", ZTRAITS_OVERMAP)
-	OM.free_treadmills += world.maxz
+	//add_new_zlevel("Overmap treadmill [++world.maxz]", ZTRAITS_OVERMAP)
+	//OM.free_treadmills += world.maxz
+	//<NSV13 - Overmap JS>
 
+	//TODO: Make a map level
+	SSJSOvermap.key_overmaps["player"] = SSJSOvermap.instance(config.ship_type, SSJSOvermap.debug_level, new /datum/vec5((JS_OVERMAP_TACMAP_SIZE / 2), (JS_OVERMAP_TACMAP_SIZE / 2), SSJSOvermap.debug_level.identifier, 0, 0))
+
+
+	//</NSV13 - Overmap JS>
 	LoadStationRoomTemplates()
 	LoadStationRooms()
 

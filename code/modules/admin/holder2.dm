@@ -166,7 +166,9 @@ generally it would be used like so:
 NOTE: it checks usr! not src! So if you're checking somebody's rank in a proc which they did not call
 you will have to do something like if(client.rights & R_ADMIN) yourself.
 */
-/proc/check_rights(rights_required, show_msg=1)
+/proc/check_rights(rights_required, show_msg=1, ignore_no_usr = FALSE)
+	if(!usr && ignore_no_usr) //hack for when this is called by a stack without a usr
+		return 1
 	if(usr?.client)
 		if (check_rights_for(usr.client, rights_required))
 			return 1

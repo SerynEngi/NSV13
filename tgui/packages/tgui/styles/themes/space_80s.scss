@@ -1,0 +1,54 @@
+/**
+ * SPDX-License-Identifier: MIT
+ */
+
+ @use 'sass:color';
+ @use 'sass:meta';
+
+ @use '../colors.scss' with (
+   $primary: #FFEBCD,
+   $fg-map-keys: (),
+   $bg-map-keys: (),
+ );
+ @use '../base.scss' with (
+   $color-bg: #201e1b,
+   $color-bg-grad-spread: 0%,
+ );
+
+ .theme-space_80s {
+   // Atomic classes
+   @include meta.load-css('../atomic/color.scss');
+
+   // Components
+   @include meta.load-css('../components/Button.scss', $with: (
+     'color-default': colors.$primary,
+     'color-disabled': #445866,
+     'color-selected': #8FC0E1,
+   ));
+   @include meta.load-css('../components/Input.scss', $with: (
+     'border-color': colors.$primary,
+   ));
+   @include meta.load-css('../components/Modal.scss');
+   @include meta.load-css('../components/Section.scss');
+   @include meta.load-css('../components/Map.scss', $with: (
+   ));
+
+   // Layouts
+   @include meta.load-css('../layouts/Layout.scss');
+   @include meta.load-css('../layouts/Window.scss');
+   @include meta.load-css('../layouts/TitleBar.scss', $with: (
+     'background-color': #81786a,
+   ));
+   .Button {
+     font-family: monospace;
+     border-color: #FFEBCD;
+     outline: base.em(1px) solid #A79A7A;
+   }
+   .candystripe:nth-child(odd) {
+     background-color: rgba(240, 255, 152, 0.5);
+   }
+   .Window__content {
+    font-family: monospace;
+  }
+
+}

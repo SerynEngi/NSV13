@@ -86,7 +86,8 @@ GLOBAL_PROTECT(admin_verbs_admin)
 	/client/proc/changeranks, //NSV13 - verb to change rank structure
 	/client/proc/system_manager, //Nsv13 - Fleet + starsystem management
 	/client/proc/instance_overmap_menu, //Nsv13 - Midround ship creation.
-	/client/proc/overmap_mode_controller //NSV13 - Admin overmap mode controller
+	/client/proc/overmap_mode_controller, //NSV13 - Admin overmap mode controller
+	/client/proc/js_overmap_panel //NSV13 - JS Overmap
 	)
 GLOBAL_LIST_INIT(admin_verbs_ban, list(/client/proc/unban_panel, /client/proc/ban_panel, /client/proc/stickybanpanel))
 GLOBAL_PROTECT(admin_verbs_ban)

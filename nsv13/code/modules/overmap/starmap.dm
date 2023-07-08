@@ -24,9 +24,14 @@
 
 
 /obj/machinery/computer/ship/navigation/can_interact(mob/user) //Override this code to allow people to use consoles when flying the ship.
-	if(user in linked?.operators)
-		return TRUE
-	return ..()
+	if(!user.can_interact_with(src)) //Theyre too far away and not flying the ship
+		return FALSE
+	if((interaction_flags_atom & INTERACT_ATOM_REQUIRES_DEXTERITY) && !user.IsAdvancedToolUser())
+		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		return FALSE
+	if(!(interaction_flags_atom & INTERACT_ATOM_IGNORE_INCAPACITATED) && user.incapacitated((interaction_flags_atom & INTERACT_ATOM_IGNORE_RESTRAINED), !(interaction_flags_atom & INTERACT_ATOM_CHECK_GRAB)))
+		return FALSE
+	return TRUE
 
 /obj/machinery/computer/ship/navigation/ui_state(mob/user)
 	return GLOB.always_state
@@ -40,7 +45,7 @@
 	ui_interact(user)
 
 /obj/machinery/computer/ship/navigation/ui_interact(mob/user, datum/tgui/ui)
-	if(!linked)
+	if(!linked_js)
 		return
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -54,7 +59,7 @@
 	.=..()
 	if(isobserver(usr) && !IsAdminGhost(usr))
 		return
-	if(!linked)
+	if(!linked_js)
 		return
 	switch(action)
 		if("map")
@@ -74,16 +79,16 @@
 			screen = 2
 			. = TRUE
 		if("jump")
-			if(linked.ftl_drive.lockout)
+			if(linked_js.ftl_drive.ftl_drive.lockout)
 				visible_message("<span class='warning'>[icon2html(src, viewers(src))] Unable to comply. Invalid authkey to unlock remove override code.</span>")
 				return
-			linked.ftl_drive.jump(selected_system)
+			linked_js.ftl_drive.ftl_drive.jump(selected_system)
 			. = TRUE
 		if("cancel_jump")
-			if(linked.ftl_drive.lockout)
+			if(linked_js.ftl_drive.ftl_drive.lockout)
 				visible_message("<span class='warning'>[icon2html(src, viewers(src))] Unable to comply. Invalid authkey to unlock remove override code.</span>")
 				return
-			if(linked.ftl_drive.cancel_ftl())
+			if(linked_js.ftl_drive.ftl_drive.cancel_ftl())
 				linked.stop_relay(CHANNEL_IMPORTANT_SHIP_ALERT)
 				linked.relay('nsv13/sound/effects/ship/ftl_stop.ogg', channel=CHANNEL_IMPORTANT_SHIP_ALERT)
 
@@ -92,19 +97,19 @@
 	if(!has_overmap())
 		return
 	var/list/data = list()
-	var/list/info = SSstar_system.ships[linked]
+	var/list/info = SSstar_system.ships[linked_js]
 	var/list/lines = list()
 	if(!info?.len)
 		return data
 
 	var/datum/star_system/current_system = info["current_system"]
 	SSstar_system.update_pos(linked)
-	if(linked.ftl_drive)
-		if(istype(linked.ftl_drive))
-			data["ftl_progress"] = linked.ftl_drive.progress
-			data["ftl_goal"] = linked.ftl_drive.req_charge
+	if(linked_js.ftl_drive.ftl_drive)
+		if(istype(linked_js.ftl_drive.ftl_drive))
+			data["ftl_progress"] = linked_js.ftl_drive.ftl_drive.progress
+			data["ftl_goal"] = linked_js.ftl_drive.ftl_drive.req_charge
 		else // yes this is so bad I know but I don't want to rework a legacy system that is probably EoL, so this'll do for now
-			var/obj/machinery/computer/ship/ftl_computer/bodge = linked.ftl_drive
+			var/obj/machinery/computer/ship/ftl_computer/bodge = linked_js.ftl_drive.ftl_drive
 			data["ftl_progress"] = bodge.progress
 			data["ftl_goal"] = bodge.spoolup_time
 	data["travelling"] = FALSE
@@ -216,14 +221,14 @@
 			if(info["current_system"])
 				var/datum/star_system/curr = info["current_system"]
 				data["star_dist"] = curr.dist(selected_system)
-				data["can_jump"] = current_system.dist(selected_system) < linked.ftl_drive?.max_range && linked.ftl_drive.ftl_state == FTL_STATE_READY && LAZYFIND(current_system.adjacency_list, selected_system.name)
-				if(return_jump_check(selected_system) && linked.ftl_drive.ftl_state == FTL_STATE_READY)
+				data["can_jump"] = current_system.dist(selected_system) < linked_js.ftl_drive.ftl_drive?.max_range && linked_js.ftl_drive.ftl_drive.ftl_state == FTL_STATE_READY && LAZYFIND(current_system.adjacency_list, selected_system.name)
+				if(return_jump_check(selected_system) && linked_js.ftl_drive.ftl_drive.ftl_state == FTL_STATE_READY)
 					data["can_jump"] = TRUE
 				if(!can_control_ship) //For public consoles
 					data["can_jump"] = FALSE
 					data["can_cancel"] = FALSE
 	data["screen"] = screen
-	data["can_cancel"] = linked?.ftl_drive?.ftl_state == FTL_STATE_JUMPING && linked?.ftl_drive?.can_cancel_jump
+	data["can_cancel"] = linked_js.ftl_drive?.ftl_drive?.ftl_state == FTL_STATE_JUMPING && linked_js.ftl_drive.ftl_drive?.can_cancel_jump
 	return data
 
 /obj/machinery/computer/ship/navigation/proc/is_in_range(datum/star_system/current_system, datum/star_system/system)

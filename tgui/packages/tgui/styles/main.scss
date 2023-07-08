@@ -38,6 +38,7 @@
 @include meta.load-css('./components/Tabs.scss');
 @include meta.load-css('./components/TextArea.scss');
 @include meta.load-css('./components/Tooltip.scss');
+@include meta.load-css('./components/CRTWindow.scss');
 
 // Interfaces
 @include meta.load-css('./interfaces/ListInput.scss');
@@ -47,7 +48,7 @@
 @include meta.load-css('./interfaces/NuclearBomb.scss');
 @include meta.load-css('./interfaces/ModularFabricator.scss');
 @include meta.load-css('./interfaces/OrbitalMap.scss');
-@include meta.load-css('./interfaces/Paper.scss');
+@include meta.load-css('./interfaces/JSOvermap.scss');
 @include meta.load-css('./interfaces/Roulette.scss');
 @include meta.load-css('./interfaces/IntegratedCircuit.scss');
 @include meta.load-css('./interfaces/Techweb.scss');

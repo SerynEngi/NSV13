@@ -10,13 +10,7 @@
 		if(!failsafe) //Only retry once
 			addtimer(CALLBACK(src, PROC_REF(get_overmap), TRUE), 30 SECONDS)
 		return FALSE
-	var/datum/space_level/SL = SSmapping.z_list[z] // Overmaps linked to Zs, like the main ship
-	if(SL?.linked_overmap)
-		return SL.linked_overmap
-	if(SSmapping.level_trait(z, ZTRAIT_RESERVED)) // Overmaps using reserved turfs, like dropships and asteroids
-		var/datum/turf_reservation/reserved = SSmapping.used_turfs[get_turf(src)]
-		if(reserved && reserved.overmap_fallback)
-			return reserved.overmap_fallback
+	return SSJSOvermap.get_overmap(z)
 
 /**
 Helper method to get what ship an observer belongs to for stuff like parallax.

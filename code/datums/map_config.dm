@@ -18,7 +18,7 @@
 	var/map_link = null //This is intentionally wrong, this will make it not link to webmap.
 	var/map_path = "map_files/Atlas"
 	var/map_file = list("atlas.dmm", "atlas2.dmm")
-	var/ship_type = /obj/structure/overmap/nanotrasen/battlecruiser/starter
+	var/ship_type = /datum/overmap/ship/player
 	var/mining_ship_type = null
 	var/mine_disable = TRUE //NSV13 option - Allow disabling of mineship loading.
 	var/mine_file = "Rocinante.dmm" //Nsv13 option
