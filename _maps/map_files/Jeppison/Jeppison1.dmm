@@ -1726,7 +1726,7 @@
 	},
 /obj/structure/closet/secure_closet/bridge,
 /obj/item/radio/headset/heads/captain/alt{
-	keyslot = new /obj/item/encryptionkey/bridge_staff;
+	keyslot = new/obj/item/encryptionkey/bridge_staff;
 	name = "Bridge Officers Bowman Headset"
 	},
 /turf/open/floor/plasteel/dark,
@@ -3954,7 +3954,7 @@
 	},
 /obj/structure/closet/secure_closet/bridge,
 /obj/item/radio/headset/heads/captain/alt{
-	keyslot = new /obj/item/encryptionkey/bridge_staff;
+	keyslot = new/obj/item/encryptionkey/bridge_staff;
 	name = "Bridge Officers Bowman Headset"
 	},
 /turf/open/floor/plasteel/dark,
@@ -6137,15 +6137,6 @@
 /obj/effect/spawner/structure/window/reinforced,
 /turf/open/floor/plating,
 /area/crew_quarters/bar)
-"rs" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/effect/turf_decal/tile/red{
-	dir = 4
-	},
-/turf/open/floor/plasteel,
-/area/hallway/primary/port)
 "rt" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -40826,7 +40817,7 @@ hK
 hK
 hK
 hK
-rs
+DW
 ua
 IC
 rj
