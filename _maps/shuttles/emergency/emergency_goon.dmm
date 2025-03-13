@@ -25,18 +25,20 @@
 /turf/closed/wall/mineral/titanium,
 /area/shuttle/escape)
 "j" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Brig";
-	req_access_txt = "2"
+/obj/machinery/door/firedoor/border_only/directional/west,
+/obj/machinery/door/firedoor/border_only/directional/east,
+/obj/machinery/door/airlock/ship/external/glass{
+	name = "Shuttle Security";
+	req_access_txt = "1"
 	},
-/obj/machinery/door/firedoor,
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape)
 "k" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Infirmary"
+/obj/machinery/door/firedoor/border_only/directional/west,
+/obj/machinery/door/firedoor/border_only/directional/east,
+/obj/machinery/door/airlock/ship/public/glass{
+	name = "Shuttle Medbay"
 	},
-/obj/machinery/door/firedoor,
 /turf/open/floor/mineral/titanium/white,
 /area/shuttle/escape)
 "l" = (
@@ -160,12 +162,13 @@
 /turf/open/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape)
 "I" = (
-/obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/structure/window/reinforced,
-/obj/item/storage/firstaid/regular,
+/obj/machinery/computer/communications{
+	dir = 8
+	},
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
 "J" = (
@@ -178,11 +181,12 @@
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
 "M" = (
-/obj/machinery/door/airlock/public/glass{
-	name = "Emergency Shuttle Cockpit";
-	req_access_txt = "19"
+/obj/machinery/door/airlock/ship/command/glass{
+	name = "Shuttle Cockpit";
+	req_one_access_txt = "19"
 	},
-/obj/machinery/door/firedoor,
+/obj/machinery/door/firedoor/border_only/directional/east,
+/obj/machinery/door/firedoor/border_only/directional/west,
 /turf/open/floor/mineral/titanium/yellow,
 /area/shuttle/escape)
 "P" = (

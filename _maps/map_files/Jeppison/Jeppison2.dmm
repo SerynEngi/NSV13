@@ -776,11 +776,17 @@
 /obj/machinery/atmospherics/components/binary/pump/layer2{
 	name = "Plasma to constrictornator5000"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "bO" = (
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "Plasma to Utility Mix"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
@@ -794,6 +800,9 @@
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "N2O to Utility Mix"
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "bR" = (
@@ -802,6 +811,9 @@
 	},
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "CO2 To Utility Mix"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
@@ -819,6 +831,9 @@
 	},
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "N2 To Utility Mix"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
@@ -847,6 +862,9 @@
 	},
 /obj/machinery/atmospherics/components/binary/pump{
 	name = "O2 To Utility Mix"
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 8
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
@@ -1088,6 +1106,9 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/visible/layer2{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 5
+	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "cx" = (
@@ -1099,6 +1120,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/visible/layer2,
 /obj/machinery/atmospherics/pipe/simple/yellow/visible,
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 8
+	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "cy" = (
@@ -1306,9 +1330,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/purple/visible,
 /obj/machinery/atmospherics/pipe/simple/purple/visible/layer2,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
-	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "cQ" = (
@@ -1327,9 +1348,6 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
-	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "cS" = (
@@ -1337,16 +1355,24 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
+/obj/structure/cable{
+	icon_state = "2-16"
 	},
+/obj/machinery/atmospherics/pipe/multiz/layer4{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/multiz/layer2{
+	dir = 4
+	},
+/obj/effect/turf_decal/ship/shutoff,
+/obj/effect/turf_decal/box,
 /turf/open/floor/plating,
 /area/engine/atmos)
 "cV" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+/obj/machinery/atmospherics/pipe/simple/supply/visible/layer2{
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -1366,9 +1392,6 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/manifold/supply/visible/layer2{
 	dir = 1
 	},
@@ -1382,18 +1405,12 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
-	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "da" = (
 /obj/machinery/atmospherics/pipe/manifold/supply/visible/layer2,
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
@@ -1516,11 +1533,8 @@
 /area/science/nanite)
 "dq" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/supply/visible/layer2{
-	dir = 6
+/obj/machinery/atmospherics/pipe/manifold/supply/visible/layer2{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
@@ -1782,7 +1796,6 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4,
 /turf/open/floor/plating,
 /area/engine/atmos)
 "dW" = (
@@ -2139,11 +2152,8 @@
 /turf/open/floor/engine/plasma,
 /area/engine/atmos)
 "eO" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/visible/layer4{
+	dir = 1
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
@@ -3012,7 +3022,7 @@
 /area/engine/engineering)
 "gX" = (
 /obj/machinery/atmospherics/pipe/manifold/yellow/visible,
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+/obj/machinery/atmospherics/pipe/simple/supply/visible/layer2{
 	dir = 8
 	},
 /turf/open/floor/plating,
@@ -3614,9 +3624,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/supply/visible/layer2{
 	dir = 8
@@ -7902,8 +7909,16 @@
 /area/science/server)
 "sC" = (
 /obj/structure/cable{
-	icon_state = "2-8"
+	icon_state = "8-16"
 	},
+/obj/effect/turf_decal/box,
+/obj/machinery/atmospherics/pipe/multiz/layer4{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/multiz/layer2{
+	dir = 8
+	},
+/obj/effect/turf_decal/ship/shutoff,
 /turf/open/floor/plasteel,
 /area/hallway/nsv/stairwell/lower)
 "sD" = (
@@ -7996,6 +8011,9 @@
 /area/science/robotics)
 "sO" = (
 /obj/machinery/airalarm/directional/west,
+/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
+	dir = 4
+	},
 /turf/open/floor/plasteel,
 /area/hallway/nsv/stairwell/lower)
 "sP" = (
@@ -11319,9 +11337,6 @@
 /obj/machinery/atmospherics/pipe/simple/supply/visible/layer2{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 9
-	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "Bc" = (
@@ -12553,11 +12568,11 @@
 /turf/closed/wall/r_wall/ship,
 /area/medical/medbay/central)
 "Eq" = (
-/obj/structure/cable{
-	icon_state = "1-2"
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 8
 	},
-/turf/open/floor/plasteel,
-/area/hallway/nsv/stairwell/lower)
+/turf/open/floor/plating,
+/area/engine/atmos)
 "Er" = (
 /obj/machinery/computer/ship/viewscreen,
 /turf/open/floor/plasteel,
@@ -14178,15 +14193,23 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/components/unary/vent_pump/on/layer2{
-	dir = 1
+/obj/machinery/atmospherics/pipe/manifold/supply/hidden/layer2{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4,
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/hidden/layer4{
+	dir = 8
+	},
 /turf/open/floor/plasteel,
 /area/hallway/nsv/stairwell/lower)
 "II" = (
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
+	dir = 8
 	},
 /turf/open/floor/plasteel,
 /area/hallway/nsv/stairwell/lower)
@@ -14230,9 +14253,11 @@
 /turf/open/floor/carpet/blue,
 /area/hallway/nsv/stairwell/lower)
 "IP" = (
-/obj/structure/cable,
-/turf/open/floor/plasteel,
-/area/hallway/nsv/stairwell/lower)
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 10
+	},
+/turf/open/floor/plating,
+/area/engine/atmos)
 "IQ" = (
 /obj/effect/turf_decal/tile/yellow{
 	dir = 4
@@ -14990,6 +15015,12 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plasteel,
 /area/hallway/nsv/deck2/forward)
+"KS" = (
+/obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
+	dir = 4
+	},
+/turf/open/floor/plating,
+/area/engine/atmos)
 "KT" = (
 /obj/structure/chair{
 	dir = 1;
@@ -15243,6 +15274,13 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2,
 /turf/open/floor/plasteel,
 /area/nsv/crew_quarters/heads/maa)
+"Mg" = (
+/obj/machinery/atmospherics/pipe/simple/purple/visible/layer4{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4,
+/turf/open/floor/plating,
+/area/engine/atmos)
 "Mh" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
@@ -15816,8 +15854,11 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+/obj/machinery/atmospherics/pipe/simple/supply/visible/layer2{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
+	dir = 9
 	},
 /turf/open/floor/plating,
 /area/engine/atmos)
@@ -16517,6 +16558,9 @@
 /obj/structure/railing,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
+	dir = 9
 	},
 /turf/open/floor/plasteel,
 /area/hallway/nsv/stairwell/lower)
@@ -17294,9 +17338,6 @@
 /obj/machinery/atmospherics/pipe/simple/yellow/visible{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/scrubbers/visible/layer4{
-	dir = 8
-	},
 /turf/open/floor/plating,
 /area/engine/atmos)
 "Ug" = (
@@ -17632,9 +17673,7 @@
 /obj/machinery/atmospherics/pipe/simple/cyan/visible/layer2{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/manifold/scrubbers/visible/layer4{
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/manifold/scrubbers/visible/layer4,
 /turf/open/floor/plating,
 /area/engine/atmos)
 "Vj" = (
@@ -35852,9 +35891,9 @@ bw
 bw
 eE
 bo
-De
+KS
 dV
-eO
+dF
 kd
 hx
 ie
@@ -36623,7 +36662,7 @@ bL
 aF
 aY
 br
-De
+Eq
 dW
 cR
 IC
@@ -37137,8 +37176,8 @@ bZ
 aF
 aY
 bt
-De
-cs
+eO
+Mg
 Ot
 De
 cQ
@@ -37651,7 +37690,7 @@ cj
 aF
 aY
 bv
-De
+Eq
 cs
 cV
 Yc
@@ -38165,7 +38204,7 @@ bL
 aF
 aY
 bx
-De
+Eq
 cu
 id
 ds
@@ -38679,7 +38718,7 @@ bL
 aF
 aY
 bz
-De
+IP
 cw
 cZ
 IC
@@ -55912,8 +55951,8 @@ ZQ
 mT
 rF
 sC
-Eq
-IP
+Et
+Et
 ab
 bP
 ju
